@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom"
 import Search from "./Search"
-function Header(){
-    console.log('header')
 
+function Header(){
     return (
     <header className="header">
         <div className="container">
             <Link to="/">
                 <div className="header__logo">
-                    <img width="38" src="assets/img/pizza-logo.svg" alt="Pizza logo" />
+                    <img width="38" src="src/assets/img/pizza-logo.svg" alt="Pizza logo" />
                     <div>
                     <h1>Pizzeria</h1>
                     <p>самая вкусная пицца во вселенной</p>

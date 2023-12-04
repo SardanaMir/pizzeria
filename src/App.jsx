@@ -1,15 +1,18 @@
 import { useState, useEffect, createContext } from 'react'
-import './scss/app.scss'
+import { useSelector, useDispatch } from 'react-redux'
+import { BrowserRouter, Routes, Route }  from 'react-router-dom'
+
 import Header from './components/Header'
 import Home  from './pages/Home'
 import NotFound from './pages/NotFound'
 import Cart from './pages/Cart'
-import { BrowserRouter, Routes, Route }  from 'react-router-dom'
+import './scss/app.scss'
 
 export const SearchContext = createContext('');
 
 function App() {
   const [searchValue, setSearchValue] = useState('');
+
   return (
     <div className="wrapper">
       <SearchContext.Provider value={{searchValue, setSearchValue}}>
